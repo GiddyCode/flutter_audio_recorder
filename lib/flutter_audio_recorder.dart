@@ -206,6 +206,8 @@ class FlutterAudioRecorder {
         return RecordingStatus.Paused;
       case "stopped":
         return RecordingStatus.Stopped;
+      case "stopAlternate":
+        return RecordingStatus.StopAlternate;
       default:
         return RecordingStatus.Unset;
     }
@@ -263,6 +265,9 @@ enum RecordingStatus {
 
   /// This specific recording Stopped, cannot be start again
   Stopped,
+
+  /// Just added this one for a work around
+  StopAlternate,
 }
 
 /// Audio Format,
